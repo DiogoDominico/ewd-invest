@@ -1,77 +1,78 @@
-import React from "react";
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EWD Investimentos</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f5f5f5; color: #333; }
+    header { background-color: #002e5b; color: white; padding: 2rem; text-align: center; }
+    section { padding: 2rem; max-width: 1000px; margin: auto; }
+    .destaque { font-size: 1.5rem; margin: 1rem 0; }
+    .numeros, .parceiros, .faq, .depoimentos, .formulario { background: white; margin: 2rem 0; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+    .numeros ul, .parceiros ul { list-style: none; padding: 0; }
+    .numeros li, .parceiros li { margin: 0.5rem 0; }
+    .cta { text-align: center; margin: 3rem 0; }
+    .cta button { background-color: #007bff; color: white; padding: 1rem 2rem; font-size: 1rem; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease; }
+    .cta button:hover { background-color: #0056b3; }
+    .formulario form { display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: auto; }
+    .formulario input, .formulario textarea { padding: 1rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+    .formulario input:focus, .formulario textarea:focus { border-color: #007bff; box-shadow: 0 0 0 3px rgba(0,123,255,0.2); outline: none; }
+    .formulario button { background-color: #28a745; color: white; padding: 1rem; font-size: 1rem; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease; }
+    .formulario button:hover { background-color: #218838; }
+    footer { background-color: #002e5b; color: white; text-align: center; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EWD Investimentos</h1>
+    <p>Consultoria de Investimentos e Gestão de Patrimônio Personalizada</p>
+  </header>
 
-export default function LandingPage() {
-  return (
-    <div className="bg-gray-100 text-gray-800 font-sans">
-      {/* Header */}
-      <header className="bg-white shadow-md">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-blue-600">Ewd Invest</h1>
-          <nav>
-            <a href="#servicos" className="mx-4 text-gray-700 hover:text-blue-600">Serviços</a>
-            <a href="#sobre" className="mx-4 text-gray-700 hover:text-blue-600">Sobre</a>
-            <a href="#contato" className="mx-4 text-gray-700 hover:text-blue-600">Contato</a>
-          </nav>
-        </div>
-      </header>
+  <section>
+    <p class="destaque">O modelo de gestão de patrimônio mais bem sucedido no mundo, agora disponível para você.</p>
+    <p>Na <strong>EWD Investimentos</strong>, oferecemos uma abordagem personalizada para atender aos seus objetivos financeiros, com transparência e alinhamento total aos seus interesses.</p>
+  </section>
 
-      {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20 text-center">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-4">Aumente seu patrimônio com orientação especializada</h2>
-          <p className="text-lg mb-6">Consultoria personalizada para alcançar seus objetivos financeiros com segurança.</p>
-          <a href="#formulario" className="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition">Agende uma conversa gratuita</a>
-        </div>
-      </section>
+  <section class="parceiros">
+    <h2>Parceiros</h2>
+    <ul>
+      <li>BTG Pactual</li>
+      <li>XP Investimentos</li>
+      <li>Warren</li>
+      <li>Avenue</li>
+      <li>Interactive Brokers</li>
+    </ul>
+  </section>
 
-      {/* Serviços */}
-      <section id="servicos" className="py-16 bg-gray-50 text-center">
-        <div className="container mx-auto px-6">
-          <h3 className="text-3xl font-bold mb-12">Nossos Serviços</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h4 className="text-xl font-semibold mb-2">Planejamento Financeiro</h4>
-              <p>Organize seu orçamento, reduza dívidas e invista com estratégia.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h4 className="text-xl font-semibold mb-2">Consultoria de Investimentos</h4>
-              <p>Monte uma carteira de investimentos alinhada ao seu perfil e objetivos.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h4 className="text-xl font-semibold mb-2">Aposentadoria e Previdência</h4>
-              <p>Planeje sua independência financeira com segurança e inteligência.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <section class="faq">
+    <h2>Perguntas Frequentes</h2>
+    <p><strong>Qual o valor mínimo para ser cliente?</strong><br>Atendemos clientes com investimentos a partir de R$ 100.000,00.</p>
+    <p><strong>Como é feita a cobrança?</strong><br>Cobramos uma taxa mensal baseada no valor atual da sua carteira, alinhando nossos interesses aos seus.</p>
+    <p><strong>Preciso sair da minha assessoria atual?</strong><br>Sim, para garantir um atendimento exclusivo e alinhado, é necessário migrar para a EWD Investimentos.</p>
+  </section>
 
-      {/* Sobre */}
-      <section id="sobre" className="py-16 bg-white text-center">
-        <div className="container mx-auto px-6">
-          <h3 className="text-3xl font-bold mb-6">Quem Somos</h3>
-          <p className="text-lg max-w-3xl mx-auto">Somos uma consultoria de investimentos credenciada na cvm com uma equipe de consultores certificados (CFP®) com mais de 15 anos de experiência em finanças pessoais e investimentos. Nossa missão é ajudar pessoas como você a conquistarem tranquilidade e liberdade financeira com soluções claras, seguras e sob medida.</p>
-        </div>
-      </section>
+  <section class="formulario">
+    <h2>Agende sua Consultoria</h2>
+    <p>Preencha o formulário abaixo e entraremos em contato para agendar uma reunião personalizada.</p>
+    <form action="https://formspree.io/f/xgvkgdzw" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome completo" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <input type="tel" name="telefone" placeholder="Seu telefone" required>
+      <textarea name="mensagem" rows="4" placeholder="Mensagem ou dúvida (opcional)"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
-      {/* Formulário */}
-      <section id="formulario" className="py-16 bg-gray-100">
-        <div className="container mx-auto px-6 max-w-xl">
-          <h3 className="text-3xl font-bold text-center mb-6">Agende uma conversa gratuita</h3>
-          <form className="bg-white p-8 rounded-lg shadow-md space-y-4">
-            <input type="text" placeholder="Seu nome" className="w-full p-3 border rounded-lg" required />
-            <input type="email" placeholder="Seu e-mail" className="w-full p-3 border rounded-lg" required />
-            <input type="tel" placeholder="Telefone (opcional)" className="w-full p-3 border rounded-lg" />
-            <textarea placeholder="Como podemos te ajudar?" className="w-full p-3 border rounded-lg" rows="4"></textarea>
-            <button type="submit" className="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg w-full hover:bg-blue-700 transition">Enviar</button>
-          </form>
-        </div>
-      </section>
+  <section class="cta">
+    <h2>Pronto para transformar a gestão do seu patrimônio?</h2>
+    <p>Agende uma consultoria gratuita com nossos especialistas.</p>
+    <button onclick="document.querySelector('.formulario').scrollIntoView({behavior: 'smooth'});">Agendar Consultoria</button>
+  </section>
 
-      {/* Rodapé */}
-      <footer className="bg-white py-6 text-center text-sm text-gray-600">
-        © 2025 Ewd Invest Consultoria de Investimentos. Todos os direitos reservados.
-      </footer>
-    </div>
-  );
-}
-
+  <footer>
+    <p>&copy; 2025 EWD Investimentos. Todos os direitos reservados.</p>
+    <p>Política de Privacidade | Termos de Uso | Contato: ewdparticipacoes@hotmail.com</p>
+  </footer>
+</body>
+</html>
